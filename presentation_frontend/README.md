@@ -4,7 +4,7 @@ To start the slide show locally:
 
 - `pnpm install`
 - `pnpm dev`
-- Visit http://localhost:3000 (default)
+- Visit http://localhost:3000 (default) or the forwarded URL your environment provides
 
 Edit the [slides.md](./slides.md) to see the changes.
 
