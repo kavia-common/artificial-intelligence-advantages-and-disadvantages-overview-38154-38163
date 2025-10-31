@@ -23,8 +23,10 @@ css: |
     <p class="subtitle text-md">A concise, balanced overview for decision‑makers</p>
     <div class="subtitle text-xs">Presenter • {{ new Date().toLocaleDateString() }}</div>
     <div class="mt-2">
-      <button class="btn-primary">Begin</button>
-      <button class="btn-secondary">Download PDF</button>
+      <!-- PUBLIC_INTERFACE: Begin button advances to the next slide -->
+      <button class="btn-primary" @click="$slidev.nav.next()">Begin</button>
+      <!-- PUBLIC_INTERFACE: Download PDF triggers Slidev export route (when available) -->
+      <a class="btn-secondary" href="/download" target="_blank" rel="noopener">Download PDF</a>
     </div>
   </div>
 </div>

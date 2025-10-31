@@ -109,6 +109,13 @@ body, .slidev-layout {
   pointer-events: none;
   background: var(--grad-hero);
   filter: blur(2px);
+  z-index: 0; /* ensure it's behind interactive elements */
+}
+
+/* Ensure hero-copy sits above decorative layers and is clickable */
+.hero-copy {
+  position: relative;
+  z-index: 1;
 }
 
 /* Typography */
@@ -232,7 +239,7 @@ a:hover {
 }
 
 /* Secondary button variant for light */
-.btn-secondary {
+.btn-secondary, a.btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -243,11 +250,13 @@ a:hover {
   padding: 12px 20px;
   font-weight: 600;
   box-shadow: 0 1px 2px rgba(17,24,39,0.04);
+  text-decoration: none;
+  cursor: pointer;
 }
-.btn-secondary:hover {
+.btn-secondary:hover, a.btn-secondary:hover {
   background: #e5e7eb;
 }
-.btn-secondary:focus-visible {
+.btn-secondary:focus-visible, a.btn-secondary:focus-visible {
   outline: 3px solid var(--theme-focus-ring);
   outline-offset: 2px;
 }
